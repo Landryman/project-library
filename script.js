@@ -8,7 +8,7 @@ function addBookToLibrary() {
     // do stuff here
 }
 
-const cardsContainer = document.querySelector(".book-card-container");
+const cardsContainer = document.querySelector(".card-container");
 
 function displayBookTitle() {
     let cards = cardsContainer.children;
