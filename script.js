@@ -20,3 +20,16 @@ function displayBookTitle() {
 }
 displayBookTitle();
 
+const addBookBtn = document.querySelector(".add-book-btn");
+
+addBookBtn.addEventListener("click", () => {
+    const form = document.createElement("form");
+    form.setAttribute("class", "add-book-form");
+    form.style.display = "flex";
+    form.style.alignItems = "center";
+    form.style.padding = "40px";
+    form.style.gap = "20px";
+    const formLabel = document.createElement("label");
+    const formInput = document.createElement("input");
+    const formSubmitBtn = document.createElement("button");
+})
