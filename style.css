@@ -5,6 +5,7 @@ body {
     align-items: flex-start;
 }
 .book-card-container {
+    background-color: orange;
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -14,7 +15,9 @@ body {
 }
 
 .card {
+    background-color: lightblue;
     padding: 30px;
+    border-radius: 3em;
 }
 
 .btn-container {
