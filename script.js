@@ -7,3 +7,15 @@ function Book() {
 function addBookToLibrary() {
     // do stuff here
 }
+
+const cardsContainer = document.querySelector(".book-card-container");
+
+function displayBookTitle() {
+    let cards = cardsContainer.children;
+
+    for (let i = 0; i < cards.length; i++) {
+        console.log(cards[i]);
+        cards[i].textContent = myLibrary[i];
+    }
+}
+displayBookTitle();
