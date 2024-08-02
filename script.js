@@ -20,16 +20,17 @@ function displayBookTitle() {
 }
 displayBookTitle();
 
-const addBookBtn = document.querySelector(".add-book-btn");
+const addBook = document.querySelector("dialog + .add-book-btn");
+const submitBook = document.querySelector(".submitBookBtn")
+const formContainer = document.querySelector(".btn-form-container");
+const dialog = document.querySelector("dialog");
 
-addBookBtn.addEventListener("click", () => {
-    const form = document.createElement("form");
-    form.setAttribute("class", "add-book-form");
-    form.style.display = "flex";
-    form.style.alignItems = "center";
-    form.style.padding = "40px";
-    form.style.gap = "20px";
-    const formLabel = document.createElement("label");
-    const formInput = document.createElement("input");
-    const formSubmitBtn = document.createElement("button");
+addBook.addEventListener("click", () => {
+    dialog.showModal();
 })
+
+submitBook.addEventListener("click", (event) => {
+    dialog.close();
+    event.preventDefault();
+})
+
