@@ -4,6 +4,11 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
+::backdrop {
+    backdrop-filter: blur(2px);
+}
+
 .book-card-container {
     background-color: orange;
     flex-grow: 1;
@@ -20,7 +25,7 @@ body {
     border-radius: 3em;
 }
 
-.btn-container {
+.btn-form-container {
     flex-shrink: 1;
     display: flex;
     justify-content: center;
