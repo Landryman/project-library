@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="card-container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </section>
+    <h1>Book Library</h1>
+    <section class="cards-container"></section>
     <dialog>
         <form id="add-book-form">
             <label for="add-book-form">Type the title of the book you want to add below.</label>
-            <input class="bookTitle" type="text" autofocus>
-            <button class="submitBookBtn" type="submit">Add</button>
+            <input class="bookInput" type="text" autofocus>
+            <button class="submit-book-btn">Add</button>
         </form>
     </dialog>
-    <section class="btn-form-container">
+    <section class="btn-container">
         <button class="add-book-btn">Add a book</button>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
