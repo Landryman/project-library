@@ -10,18 +10,26 @@
 
 <body>
     <h1>Book Library</h1>
-    <section class="cards-container"></section>
-    <dialog>
-        <form id="add-book-form">
-            <label for="add-book-form">Type the title of the book you want to add below.</label>
-            <input class="bookInput" type="text" autofocus>
-            <button class="submit-book-btn">Add</button>
-        </form>
-    </dialog>
-    <section class="btn-container">
-        <button class="add-book-btn">Add a book</button>
-    </section>
-    <script src="script.js"></script>
+  <section class="cards-container">
+  </section>
+  
+  <dialog class="add-book-dialog">
+      <form id="add-book-form">
+        <label for="add-book-form">Title</label>
+        <input class="input-book-title" type="text" placeholder="Title" name="title" autofocus>
+        <label for="add-book-form">Author</label>
+        <input class="input-book-author" type="text" placeholder="Author" name="author">
+        <label for="add-book-form">Year Published</label>
+        <input class="input-book-year" type="text" placeholder="1985" name="year">
+        <button class="submit-book-btn" type="submit">Submit Book</button>
+      </form>
+  </dialog>
+  
+  <section class="add-book-btn-container">
+    <button class="add-book-btn" type="button">Add a book</button>
+  </section>
+  
+  <script src="script.js"></script>
 </body>
 
 </html>
