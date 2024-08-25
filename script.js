@@ -1,8 +1,5 @@
 const myLibrary = [];
 const cardsContainer = document.querySelector(".cards-container");
-
-    
-
 const addBookBtn = document.querySelector(".add-book-btn");
 const getBookDialog = document.querySelector(".add-book-dialog");
 const inputBookTitle = document.querySelector(".input-book-title");
@@ -22,21 +19,25 @@ function displayBook(book) {
   const cardTitle = document.createElement("h2");
   const cardAuthor = document.createElement("h2");
   const cardYear = document.createElement("h2");
+  const removeBookBtn = document.createElement("button");
+
     card.setAttribute("class", ".card");
     card.setAttribute("style", "display: flex; flex-direction: column; justify-content: space-between; background-color: lightblue; padding: 15px; border-radius: 0.5em; box-shadow: 2px 2px 6px #6b4600; ");
-    cardsContainer.appendChild(card);
-    
-    const removeBookBtn = document.createElement("button");
-    removeBookBtn.setAttribute("class", "remove-book-btn");
-    removeBookBtn.textContent = "Remove Book";
     card.appendChild(cardTitle);
     card.appendChild(cardAuthor);
     card.appendChild(cardYear);
     card.appendChild(removeBookBtn);
+    
+    removeBookBtn.setAttribute("class", "remove-book-btn");
+    removeBookBtn.textContent = "Remove Book";
+    removeBookBtn.value = book.createdAt;
+
     cardTitle.textContent = book.title;
     cardAuthor.textContent = book.author;
     cardYear.textContent = book.year;
-    removeBookBtn.value = book.createdAt;
+
+    cardsContainer.appendChild(card);
+    
     let myCards = document.querySelectorAll(".card");
   
     console.dir(myCards);
@@ -45,10 +46,6 @@ function displayBook(book) {
       myLibrary[i].shift();
       myLibrary[i].push(book);
     }
-    // myLibrary.forEach(() => {
-    // [do all the DOM stuff for this book]
-    // })
- 
 }
 
 function addBookToLibrary(newTitle, newAuthor, newYear) {
