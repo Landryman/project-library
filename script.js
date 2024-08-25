@@ -35,9 +35,12 @@ function displayBook(book) {
     cardAuthor.textContent = book.author;
     cardYear.textContent = book.year;
     
+    removeBookBtn.value = book.createdAt;
     removeBookBtn.setAttribute("class", "remove-book-btn");
     removeBookBtn.textContent = "Remove Book";
-    removeBookBtn.value = book.createdAt;
+
+    readStatusBtn.setAttribute("class", "read-status-btn");
+    readStatusBtn.textContent = book.readStatus;
 
     card.appendChild(cardTitle);
     card.appendChild(cardAuthor);
@@ -100,5 +103,4 @@ getCardsContainer.addEventListener("click", (event) => {
     removeCard(event);
   } else if (event.target === setReadStatusBtn) {
     changeReadStatus(event);
-});
-
+}});
