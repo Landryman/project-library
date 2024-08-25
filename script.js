@@ -87,7 +87,7 @@ getAddBookBtn.addEventListener("click", () => {
 })
 
 getSubmitBookBtn.addEventListener("click", (event) => {
-
+    checkRadio();
     addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value, radioBtnClick);
     getBookDialog.close();
     event.preventDefault();  
@@ -96,6 +96,6 @@ getSubmitBookBtn.addEventListener("click", (event) => {
 getCardsContainer.addEventListener("click", (event) => {
   if (event.target === setRemoveBookBtn ) {
     removeCard(event);
-  }
+  } 
 });
 
