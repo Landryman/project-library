@@ -80,7 +80,7 @@ getAddBookBtn.addEventListener("click", () => {
 
 getSubmitBookBtn.addEventListener("click", (event) => {
 
-    addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value);
+    addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value, radioBtnClick);
     getBookDialog.close();
     event.preventDefault();  
 })
