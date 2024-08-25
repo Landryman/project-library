@@ -26,22 +26,24 @@ function displayBook(book) {
   const cardYear = document.createElement("h2");
   const removeBookBtn = document.createElement("button");
   const readStatusBtn = document.createElement("button");
-  setRemoveBookBtn = removeBookBtn;
-  setReadStatusBtn = readStatusBtn;
+    setRemoveBookBtn = removeBookBtn;
+    setReadStatusBtn = readStatusBtn;
     card.setAttribute("class", ".card");
     card.setAttribute("style", "display: flex; flex-direction: column; justify-content: space-between; background-color: lightblue; padding: 15px; border-radius: 0.5em; box-shadow: 2px 2px 6px #6b4600; ");
-    card.appendChild(cardTitle);
-    card.appendChild(cardAuthor);
-    card.appendChild(cardYear);
-    card.appendChild(removeBookBtn);
+
+    cardTitle.textContent = book.title;
+    cardAuthor.textContent = book.author;
+    cardYear.textContent = book.year;
     
     removeBookBtn.setAttribute("class", "remove-book-btn");
     removeBookBtn.textContent = "Remove Book";
     removeBookBtn.value = book.createdAt;
 
-    cardTitle.textContent = book.title;
-    cardAuthor.textContent = book.author;
-    cardYear.textContent = book.year;
+    card.appendChild(cardTitle);
+    card.appendChild(cardAuthor);
+    card.appendChild(cardYear);
+    card.appendChild(removeBookBtn);
+    card.appendChild(readStatusBtn);
 
     getCardsContainer.appendChild(card);
 
