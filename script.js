@@ -1,11 +1,11 @@
 const myLibrary = [];
-const cardsContainer = document.querySelector(".cards-container");
-const addBookBtn = document.querySelector(".add-book-btn");
+const getCardsContainer = document.querySelector(".cards-container");
+const getAddBookBtn = document.querySelector(".add-book-btn");
 const getBookDialog = document.querySelector(".add-book-dialog");
-const inputBookTitle = document.querySelector(".input-book-title");
-const inputBookAuthor = document.querySelector(".input-book-author");
-const inputBookYear = document.querySelector(".input-book-year");
-const submitBook = document.querySelector(".submit-book-btn");
+const getInputBookTitle = document.querySelector(".input-book-title");
+const getInputBookAuthor = document.querySelector(".input-book-author");
+const getInputBookYear = document.querySelector(".input-book-year");
+const getSubmitBookBtn = document.querySelector(".submit-book-btn");
 
 function Book(title, author, year) {
     this.title = title;
@@ -36,15 +36,14 @@ function displayBook(book) {
     cardAuthor.textContent = book.author;
     cardYear.textContent = book.year;
 
-    cardsContainer.appendChild(card);
+    getCardsContainer.appendChild(card);
     
     let myCards = document.querySelectorAll(".card");
-  
-    console.dir(myCards);
-    for (let i = 0; i < myCards.length; i++) {
-      newLibrary[i].push(book);
-      myLibrary[i].shift();
-      myLibrary[i].push(book);
+
+    const tempLibrary = myLibrary;
+    myLibrary = [];
+    for (let i = 0; i < tempLibrary.length; i++) {
+      myLibrary.push(tempLibrary[i]);
     }
 }
 
@@ -69,16 +68,16 @@ function removeCard(evt) {
 //   }
 // }
 
-addBookBtn.addEventListener("click", () => {
+getAddBookBtn.addEventListener("click", () => {
     getBookDialog.showModal();
 })
 
-submitBook.addEventListener("click", (event) => {
-    addBookToLibrary(inputBookTitle.value, inputBookAuthor.value, inputBookYear.value);
+getSubmitBookBtn.addEventListener("click", (event) => {
+    addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value);
     getBookDialog.close();
     event.preventDefault();
       
 })
 
-cardsContainer.addEventListener("click", removeCard);
+getCardsContainer.addEventListener("click", removeCard);
 
