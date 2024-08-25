@@ -16,6 +16,7 @@ function Book(title, author, year) {
     this.author = author;
     this.year = year;
     this.createdAt = Date.now();
+    this.readStatus = readStatus;
 }
 
 function displayBook(book) {
@@ -51,6 +52,15 @@ function displayBook(book) {
     }
 }
 
+let radioBtnClick = "";
+function checkRadio() {
+  if (getRadioBtnStatusRead.checked) {
+    radioBtnClick = getRadioBtnStatusRead.value;
+  } else if (getRadioBtnStatusNotRead.checked) {
+    radioBtnClick = getRadioBtnStatusNotRead.value;
+  }
+}
+
 function addBookToLibrary(newTitle, newAuthor, newYear) {
     const newBook = new Book(newTitle, newAuthor, newYear);
     myLibrary.push(newBook);
@@ -69,6 +79,7 @@ getAddBookBtn.addEventListener("click", () => {
 })
 
 getSubmitBookBtn.addEventListener("click", (event) => {
+
     addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value);
     getBookDialog.close();
     event.preventDefault();  
