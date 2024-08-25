@@ -60,15 +60,6 @@ function removeCard(evt) {
   }
 }
 
-// function removeBook(evt) {
-//   const timeStamp = Number(evt.target.value);
-//   if (evt.target.classList.contains("remove-book-btn")) {
-//     myLibrary = myLibrary.filter((item => 
-//       item.createdAt !== timeStamp))
-//     removeCard(timeStamp, evt);
-//   }
-// }
-
 getAddBookBtn.addEventListener("click", () => {
     getBookDialog.showModal();
 })
@@ -76,9 +67,12 @@ getAddBookBtn.addEventListener("click", () => {
 getSubmitBookBtn.addEventListener("click", (event) => {
     addBookToLibrary(getInputBookTitle.value, getInputBookAuthor.value, getInputBookYear.value);
     getBookDialog.close();
-    event.preventDefault();
-      
+    event.preventDefault();  
 })
 
-getCardsContainer.addEventListener("click", removeCard);
+getCardsContainer.addEventListener("click", (event) => {
+  if (event.target === setRemoveBookBtn ) {
+    removeCard(event);
+  }
+});
 
