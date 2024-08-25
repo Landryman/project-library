@@ -6,6 +6,8 @@ const getInputBookTitle = document.querySelector(".input-book-title");
 const getInputBookAuthor = document.querySelector(".input-book-author");
 const getInputBookYear = document.querySelector(".input-book-year");
 const getSubmitBookBtn = document.querySelector(".submit-book-btn");
+let setRemoveBookBtn = "";
+let setReadStatusBtn = "";
 
 function Book(title, author, year) {
     this.title = title;
@@ -20,7 +22,9 @@ function displayBook(book) {
   const cardAuthor = document.createElement("h2");
   const cardYear = document.createElement("h2");
   const removeBookBtn = document.createElement("button");
-
+  const readStatusBtn = document.createElement("button");
+  setRemoveBookBtn = removeBookBtn;
+  setReadStatusBtn = readStatusBtn;
     card.setAttribute("class", ".card");
     card.setAttribute("style", "display: flex; flex-direction: column; justify-content: space-between; background-color: lightblue; padding: 15px; border-radius: 0.5em; box-shadow: 2px 2px 6px #6b4600; ");
     card.appendChild(cardTitle);
@@ -37,8 +41,6 @@ function displayBook(book) {
     cardYear.textContent = book.year;
 
     getCardsContainer.appendChild(card);
-    
-    let myCards = document.querySelectorAll(".card");
 
     const tempLibrary = myLibrary;
     myLibrary = [];
