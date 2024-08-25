@@ -42,6 +42,9 @@ function displayBook(book) {
       myLibrary[i].shift();
       myLibrary[i].push(book);
     }
+    // myLibrary.forEach(() => {
+    // [do all the DOM stuff for this book]
+    // })
  
 }
 
@@ -56,6 +59,15 @@ function removeCard(evt) {
       evt.target.parentElement.remove();
   }
 }
+
+// function removeBook(evt) {
+//   const timeStamp = Number(evt.target.value);
+//   if (evt.target.classList.contains("remove-book-btn")) {
+//     myLibrary = myLibrary.filter((item => 
+//       item.createdAt !== timeStamp))
+//     removeCard(timeStamp, evt);
+//   }
+// }
 
 addBookBtn.addEventListener("click", () => {
     getBookDialog.showModal();
