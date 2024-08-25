@@ -6,6 +6,8 @@ const getInputBookTitle = document.querySelector(".input-book-title");
 const getInputBookAuthor = document.querySelector(".input-book-author");
 const getInputBookYear = document.querySelector(".input-book-year");
 const getSubmitBookBtn = document.querySelector(".submit-book-btn");
+const getRadioBtnStatusRead = document.querySelector(".status-read-radio-btn");
+const getRadioBtnStatusNotRead = document.querySelector(".status-unread-radio-btn");
 let setRemoveBookBtn = "";
 let setReadStatusBtn = "";
 
