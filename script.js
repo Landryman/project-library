@@ -2,9 +2,7 @@ const myLibrary = [];
 const cardsContainer = document.querySelector(".cards-container");
 
     
-const cardTitle = document.createElement("h2");
-    const cardAuthor = document.createElement("h2");
-    const cardYear = document.createElement("h2");
+
 const addBookBtn = document.querySelector(".add-book-btn");
 const getBookDialog = document.querySelector(".add-book-dialog");
 const inputBookTitle = document.querySelector(".input-book-title");
@@ -21,6 +19,9 @@ function Book(title, author, year) {
 
 function displayBook(book) {
   const card = document.createElement("div");
+  const cardTitle = document.createElement("h2");
+  const cardAuthor = document.createElement("h2");
+  const cardYear = document.createElement("h2");
     card.setAttribute("class", ".card");
     card.setAttribute("style", "display: flex; flex-direction: column; justify-content: space-between; background-color: lightblue; padding: 15px; border-radius: 0.5em; box-shadow: 2px 2px 6px #6b4600; ");
     cardsContainer.appendChild(card);
