@@ -61,8 +61,8 @@ function checkRadio() {
   }
 }
 
-function addBookToLibrary(newTitle, newAuthor, newYear) {
-    const newBook = new Book(newTitle, newAuthor, newYear);
+function addBookToLibrary(newTitle, newAuthor, newYear, newRadioStatus) {
+    const newBook = new Book(newTitle, newAuthor, newYear, newRadioStatus);
     myLibrary.push(newBook);
     displayBook(newBook);
 }
