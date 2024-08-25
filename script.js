@@ -11,7 +11,7 @@ const getRadioBtnStatusNotRead = document.querySelector(".status-unread-radio-bt
 let setRemoveBookBtn = "";
 let setReadStatusBtn = "";
 
-function Book(title, author, year) {
+function Book(title, author, year, readStatus) {
     this.title = title;
     this.author = author;
     this.year = year;
