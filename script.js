@@ -74,6 +74,14 @@ function removeCard(evt) {
   }
 }
 
+function changeReadStatus(evt) {
+  if (evt.target.textContent === "READ") {
+    evt.target.textContent = "NOT READ";
+  } else {
+    evt.target.textContent = "READ";
+  }
+}
+
 getAddBookBtn.addEventListener("click", () => {
     getBookDialog.showModal();
 })
