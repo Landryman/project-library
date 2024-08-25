@@ -49,6 +49,7 @@ function displayBook(book) {
 
 function addBookToLibrary(newTitle, newAuthor, newYear) {
     const newBook = new Book(newTitle, newAuthor, newYear);
+    myLibrary.push(newBook);
     displayBook(newBook);
 }
 
