@@ -101,9 +101,9 @@ getSubmitBookBtn.addEventListener("click", (event) => {
 })
 
 getCardsContainer.addEventListener("click", (event) => {
-  if (event.target === setRemoveBookBtn) {
+  if (event.target.classList.contains("remove-book-btn")) {
     removeCard(event);
-  } else if (event.target === setReadStatusBtn) {
+  } else if (event.target.classList.contains("read-status-btn")) {
     changeReadStatus(event);
   }
 });
