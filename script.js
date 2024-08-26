@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 const getCardsContainer = document.querySelector(".cards-container");
 const getAddBookBtn = document.querySelector(".add-book-btn");
 const getBookDialog = document.querySelector(".add-book-dialog");
@@ -87,6 +87,8 @@ function changeReadStatus(evt) {
   }
 }
 
+//Bug: if multiple cards are created, only last card's read status can change.
+
 getAddBookBtn.addEventListener("click", () => {
     getBookDialog.showModal();
 })
@@ -99,8 +101,9 @@ getSubmitBookBtn.addEventListener("click", (event) => {
 })
 
 getCardsContainer.addEventListener("click", (event) => {
-  if (event.target === setRemoveBookBtn ) {
+  if (event.target === setRemoveBookBtn) {
     removeCard(event);
   } else if (event.target === setReadStatusBtn) {
     changeReadStatus(event);
-}});
+  }
+});
